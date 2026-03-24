@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenya Best Online Writings</title>
+<style>
+    body {margin:0; font-family:Arial, Helvetica, sans-serif; background-color:#f4f4f4; color:#333;}
+    header {background-color:#000; color:#fff; padding:30px 20px; text-align:center;}
+    .logo {width:120px; margin-bottom:10px;}
+    nav {background-color:#111; padding:12px; text-align:center;}
+    nav a {color:white; text-decoration:none; margin:0 15px; font-weight:bold;}
+    nav a:hover {color:#00c3ff;}
+    .container {padding:30px; max-width:1000px; margin:auto; background:white; margin-top:20px; border-radius:10px;}
+    h1,h2 {color:#000;}
+    .services,.jobs {display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;}
+    .card {background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+    .pricing {display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;}
+    .price-box {background:#000; color:white; padding:25px; border-radius:10px; text-align:center;}
+    .btn {display:inline-block; margin-top:15px; padding:12px 20px; background:#00c3ff; color:white; text-decoration:none; border-radius:8px; font-weight:bold; border:none; cursor:pointer;}
+    input,select {width:100%; padding:12px; margin-top:10px; border-radius:8px; border:1px solid #ccc;}
+    .whatsapp {position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px 18px; border-radius:50px; font-weight:bold; text-decoration:none; box-shadow:0 3px 8px rgba(0,0,0,0.3);}
+    footer {text-align:center; padding:15px; background:#000; color:white; margin-top:30px;}
+    @media(max-width:700px){.services,.pricing,.jobs{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Kenya Best Online Writings</h1>
+    <p>Article Writing & Online Work Platform</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#jobs">Online Jobs</a>
+    <a href="#register">Register</a>
+    <a href="#admin">Admin</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container" id="home">
+    <h2>Welcome to Kenya Best Online Writings</h2>
+    <p>The best paying ONLINE WORK PLATFORM that gives Kenyans opportunities to earn through article writing and transcription work.</p>
+
+    <div class="services">
+        <div class="card">
+            <h3>Article Writing</h3>
+            <p>We provide article writing jobs and also help beginners start online writing and earn from home.</p>
+            <button class="btn" onclick="goToJobs('article')">Buy & Start Article Writing</button>
+        </div>
+
+        <div class="card">
+            <h3>Transcription Work</h3>
+            <p>Join our platform and start earning through transcription work even if you are a beginner.</p>
+            <button class="btn" onclick="goToJobs('transcription')">Buy & Start Transcription</button>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="about">
+    <h2>About Us</h2>
+    <p>Kenya Best Online Writings is the best paying ONLINE WORK PLATFORM that gives Kenyans opportunities to earn money through online writing jobs. Our goal is to help students, job seekers, and writers start earning online easily.</p>
+</div>
+
+<div class="container" id="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Online Writing Jobs</li>
+        <li>Article Writing Services</li>
+        <li>Transcription Work</li>
+        <li>Beginner Writing Training</li>
+        <li>Weekly Online Job Updates</li>
+    </ul>
+</div>
+
+<div class="container" id="jobs">
+    <h2>Available Online Jobs</h2>
+
+    <div class="jobs">
+        <div class="card" id="articleJobs">
+            <h3>Article Writing Jobs</h3>
+            <p>Write simple articles for blogs and websites. Payment is done after completing tasks.</p>
+            <p><strong>Example task:</strong> Write a 500-word article about business, technology, or education.</p>
+        </div>
+
+        <div class="card" id="transcriptionJobs">
+            <h3>Transcription Jobs</h3>
+            <p>Convert audio into text using your phone or laptop.</p>
+            <p><strong>Example task:</strong> Listen to a short audio (3–5 minutes) and type what you hear.</p>
+        </div>
+
+        <div class="card">
+            <h3>Online Typing Jobs</h3>
+            <p>Typing work for students and job seekers who want to start earning online easily.</p>
+        </div>
+
+        <div class="card">
+            <h3>Weekly Writing Tasks</h3>
+            <p>Registered members receive weekly writing tasks and online job opportunities.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="register">
+    <h2>Register to Start Working</h2>
+
+    <div class="pricing">
+        <div class="price-box">
+            <h3>Tier 3 Registration</h3>
+            <h2>Ksh 5,000</h2>
+            <button class="btn" onclick="showMpesa('Tier 3 - 5,000')">Choose Tier 3</button>
+        </div>
+
+        <div class="price-box">
+            <h3>Premium Registration</h3>
+            <h2>Ksh 10,000</h2>
+            <button class="btn" onclick="showMpesa('Premium - 10,000')">Choose Premium</button>
+        </div>
+    </div>
+
+    <h3 style="margin-top:25px;">Fill the Registration Form</h3>
+
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Phone Number" required>
+
+        <select onchange="showMpesa(this.value)">
+            <option value="">Select Registration Plan</option>
+            <option value="Tier 3 - 5,000">Tier 3 - Ksh 5,000</option>
+            <option value="Premium - 10,000">Premium - Ksh 10,000</option>
+        </select>
+
+        <a class="btn" href="https://wa.me/254116228948">Submit Registration</a>
+    </form>
+</div>
+
+<div class="container" id="admin">
+    <h2>Admin Login</h2>
+    <div class="card">
+        <h3>Login to Admin Panel</h3>
+        <input type="text" id="adminEmail" placeholder="Admin Email" required>
+        <input type="password" id="adminPassword" placeholder="Password" required>
+        <button class="btn" onclick="loginAdmin()">Login</button>
+        <p id="loginMessage" style="color:red;margin-top:10px;"></p>
+    </div>
+</div>
+
+<div class="container" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: writerskenyaonline@gmail.com</p>
+    <p>Phone: 0112875254</p>
+    <p>WhatsApp: 0112875254</p>
+</div>
+
+<a class="whatsapp" href="https://wa.me/254112875254">WhatsApp Us</a>
+
+<footer>
+    <p>© 2026 Kenya Best Online Writings. All Rights Reserved.</p>
+</footer>
+
+<script>
+// ADMIN LOGIN
+const ADMIN_EMAIL = 'harrisondavaji35@gmail.com';
+const ADMIN_PASSWORD = 'SecureMumias@35';
+
+function loginAdmin() {
+    const email = document.getElementById('adminEmail').value;
+    const password = document.getElementById('adminPassword').value;
+    const message = document.getElementById('loginMessage');
+
+    if(email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+        message.style.color = 'green';
+        message.innerText = 'Login successful! Welcome, Admin.';
+        alert('Welcome Admin');
+    } else {
+        message.style.color = 'red';
+        message.innerText = 'Invalid credentials!';
+    }
+}
+
+// GO TO JOBS WHEN USER CLICKS BUY
+function goToJobs(type) {
+    document.getElementById('jobs').scrollIntoView({behavior: 'smooth'});
+
+    if(type === 'article') {
+        alert('You selected Article Writing. Scroll down to see available article writing jobs.');
+    }
+
+    if(type === 'transcription') {
+        alert('You selected Transcription. Scroll down to see transcription jobs.');
+    }
+}
+
+// SHOW MPESA PROMPT
+function showMpesa(packageName) {
+    if(packageName !== '') {
+        alert('You selected: ' + packageName + '\n\nSend payment to M-Pesa Number: 0112875254\n\nAfter payment click Submit Registration.');
+    }
+}
+</script>
+
+</body>
+</html>
